@@ -10,7 +10,9 @@ function Main() {
       {languages.map((language, index) => (
         <button
           key={index}
-          className="btn btn-primary m-2"
+          className={`btn m-2 ${
+            selectedLanguage === language ? "btn-success" : "btn-primary"
+          }`}
           onClick={() => setSelectedLanguage(language)}
         >
           {language.title}
